@@ -1,6 +1,15 @@
 .caseItemLogement{
-    background-color: #FF6060;
-    width: 500px;
+    background-image: linear-gradient(to top, #863535, #FF6060); 
+    width: 30%;
     height: 500px;
     border-radius: 10px;
+    display:flex;
+    align-items: flex-end;
 }
+
+.caseItemTitle{
+    font-family:'Montserrat';
+    color:white;
+   margin-left:20px;
+}
+

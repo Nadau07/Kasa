@@ -1,0 +1,16 @@
+.footer{
+    height: 209px;
+    background-color: black;
+    text-align: center;
+
+}
+
+.footerLogo{
+    margin-top:60px;
+}
+
+.footerP{
+    color:white;
+    font-family:'Montserrat';
+    font-size:20px;
+}
