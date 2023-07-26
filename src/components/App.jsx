@@ -1,12 +1,19 @@
 import React from 'react'
 import Banner from './Banner'
 import '../styles/App.css'
-/*import LogementList from './LogementList';
-import LogementItem from './LogementItem';*/
+import ImgBanner from './ImgBanner'
+import LogementContainer from './LogementContainer';
+/*import LogementItem from './LogementItem';*/
 
 function App() {
-  return <Banner />
-
+  return (
+  <div> 
+  <Banner />
+  <ImgBanner />
+  <LogementContainer />
+  
+  </div>
+  )
 
 }
 
