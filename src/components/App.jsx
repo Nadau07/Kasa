@@ -13,7 +13,6 @@ function App() {
   <ImgBanner />
   <LogementContainer />
   <Footer />
-  
   </div>
   )
 
