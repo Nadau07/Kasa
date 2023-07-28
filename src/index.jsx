@@ -1,11 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import './styles/index.css'
-import App from './components/App'
-import Error from './components/Error'
+import App from './pages/App'
+import Error from './pages/Error'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Apropos from './components/Apropos'
-import FicheLogement from './components/FicheLogement'
+import Apropos from './pages/Apropos'
+import FicheLogement from './pages/FicheLogement'
 
 ReactDOM.render(
 	<React.StrictMode>

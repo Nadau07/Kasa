@@ -1,5 +1,5 @@
-import Banner from './Banner'
-import Footer from './Footer'
+import Banner from '../components/Banner'
+import Footer from '../components/Footer'
 import '../styles/Apropos.css'
 
 function Apropos(){

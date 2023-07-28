@@ -1,6 +1,6 @@
-import Banner from './Banner'
+import Banner from '../components/Banner'
 import '../styles/Error.css'
-import Footer from './Footer'
+import Footer from '../components/Footer'
 
 function Error(){
     return(

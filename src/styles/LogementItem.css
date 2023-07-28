@@ -1,7 +1,7 @@
 .caseItemLogement{
     background-image: linear-gradient(to top, #863535, #FF6060); 
-    width: 30%;
-    height: 500px;
+    width: 250px;
+    height: 250px;
     border-radius: 10px;
     display:flex;
     align-items: flex-end;
@@ -12,6 +12,7 @@
     color:white;
    margin-left:20px;
 }
+
 
 /*SMALL DEVICES*/
 @media screen and (max-width : 700px){
