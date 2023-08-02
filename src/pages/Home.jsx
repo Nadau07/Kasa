@@ -1,21 +1,21 @@
 import React from 'react'
 import Banner from '../components/Banner'
-import '../styles/App.css'
+import '../styles/Home.css'
 import ImgBanner from '../components/ImgBanner'
 import LogementContainer from '../components/LogementContainer'
 import Footer from '../components/Footer'
 
 
-function App() {
+function Home() {
   return (
-  <div> 
+  <> 
   <Banner />
   <ImgBanner />
   <LogementContainer />
   <Footer />
-  </div>
+  </>
   )
 
 }
 
-export default App
+export default Home
