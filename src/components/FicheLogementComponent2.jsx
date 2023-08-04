@@ -1,5 +1,4 @@
-
-
+import '../styles/FicheLogementComponent2.css'
 
 function ficheLogementComponents2(){
 

@@ -1,0 +1,32 @@
+
+.component4Totalite{
+    width: 100%;
+    margin-right:10px;
+}
+
+.logementDescription{
+    background-color: #FF6060;
+    color:white;
+    border-radius: 10px;
+    padding:10px;
+    margin-bottom:0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logementDescription i{
+    cursor:pointer;
+    font-size:24px; 
+}
+
+.paragrapheDescription{
+    background-color: #F6F6F6;
+    margin-top:0;
+    border-radius: 16px;
+    padding-left:20px;
+    padding-top:5px;
+    padding-bottom:5px;
+    position:relative;
+    z-index: -1;
+}

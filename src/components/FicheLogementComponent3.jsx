@@ -1,3 +1,5 @@
+import '../styles/FicheLogementComponent3.css'
+
 function FicheLogementComponents3(){
 
     return(
