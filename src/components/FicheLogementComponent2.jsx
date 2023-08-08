@@ -1,15 +1,18 @@
 import '../styles/FicheLogementComponent2.css'
 
-function ficheLogementComponents2(){
+function ficheLogementComponents2(props){
 
     return(
-        <div className='ficheLogementComponent2'>
-        <h1>TITRE DU LOGEMENT</h1>
-        <h2>SOUS TITRE</h2>
-        <span className='ficheLogementTag'>P1</span>
-        <span className='ficheLogementTag'>P2</span>
-        <span className='ficheLogementTag'>P3</span>
-    </div>
+            <div className='ficheLogementComponent2'>
+                <h1>{props.title}</h1>
+                <h2>{props.location}</h2>
+                <>
+                {props.tag.map((tag) => (
+                    <span className='ficheLogementTag' key={tag}>{tag}</span>
+                ))}
+                </>
+            </div>
+    
     )
 }
 
