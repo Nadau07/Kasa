@@ -1,4 +1,4 @@
-import Banner from '../components/Banner'
+import {NavLink} from 'react-router-dom'
 import LogementImage from '../components/LogementImage'
 import LogementTitre from '../components/LogementTitre'
 import LogementProprietaire from '../components/LogementProprietaire'
@@ -30,9 +30,16 @@ function FicheLogement() {
 
    
     return(
-        
+        <>
+        <div className='banner'>
+        <NavLink to={`/`}>
+        <img className='banner_logo'src='logo.jpg' alt='logo'/>
+        </NavLink>
+        <NavLink to={`/`}>Accueil</NavLink>
+        <NavLink to={`/Apropos`}>A propos</NavLink>
+    </div>
     <div  className='ficheLogementTotal'>
-        <Banner />
+      
 
         <div className='component1'>
           
@@ -47,13 +54,10 @@ function FicheLogement() {
 
             <div className='component4Css'> 
             <LogementDescription title="Description" content={selectedResponse.description}/>
-            <LogementDescription title="Equipements" content={selectedResponse.equipments.map(equipement =><li>{equipement}</li>)}/>
+            <LogementDescription title="Equipements" content={selectedResponse.equipments.map(equipement =><li key={equipement} >{equipement}</li>)}/>
             </div>
-           
-            
-        
         </div>
-
+        </>
     )
 }
 
