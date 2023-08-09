@@ -1,5 +1,5 @@
-import '../styles/LogementContainer.css'
-import LogementItem from './LogementItem';
+import '../styles/HomeContainer.css'
+import HomeItem from './HomeItem';
 import { useState, useEffect } from 'react';
 
 
@@ -20,7 +20,7 @@ function LogementContainer(){
  return (
     <div className='containerLogement'>
     {appartements.map((appartement)=>(
-        <LogementItem key={appartement.id} title={appartement.title} cover={appartement.cover} id={appartement.id} />
+        <HomeItem key={appartement.id} title={appartement.title} cover={appartement.cover} id={appartement.id} />
     ))}
     
     </div>

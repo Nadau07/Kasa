@@ -1,4 +1,4 @@
-import '../styles/LogementItem.css'
+import '../styles/HomeItem.css'
 import {Link} from 'react-router-dom'
 
 

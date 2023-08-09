@@ -1,4 +1,4 @@
-import '../styles/FicheLogementComponent4.css'
+import '../styles/LogementDescription.css'
 
 
 function FicheLogementComponents4(props){

@@ -1,8 +1,8 @@
 import Banner from '../components/Banner'
-import FicheLogementComponents1 from '../components/FicheLogementComponent1'
-import FicheLogementComponents2 from '../components/FicheLogementComponent2'
-import FicheLogementComponents3 from '../components/FicheLogementComponent3'
-import FicheLogementComponents4 from '../components/FicheLogementComponent4'
+import LogementImage from '../components/LogementImage'
+import LogementTitre from '../components/LogementTitre'
+import LogementProprietaire from '../components/LogementProprietaire'
+import LogementDescription from '../components/LogementDescription'
 import '../styles/FicheLogement.css'
 import { useLocation } from 'react-router-dom'
 import { useEffect, useState } from 'react'
@@ -36,18 +36,18 @@ function FicheLogement() {
 
         <div className='component1'>
           
-            <FicheLogementComponents1 pictures={selectedResponse.pictures}/>
+            <LogementImage pictures={selectedResponse.pictures}/>
             
         </div>
 
         <div className='component2Et3'>
-        <FicheLogementComponents2 title={selectedResponse.title} location={selectedResponse.location} tag={selectedResponse.tags}/>
-        <FicheLogementComponents3 rating={selectedResponse.rating} host={selectedResponse.host} />
+        <LogementTitre title={selectedResponse.title} location={selectedResponse.location} tag={selectedResponse.tags}/>
+        <LogementProprietaire rating={selectedResponse.rating} host={selectedResponse.host} />
         </div>
 
             <div className='component4Css'> 
-            <FicheLogementComponents4 title="Description" content={selectedResponse.description}/>
-            <FicheLogementComponents4 title="Equipements" content={selectedResponse.equipments.map(equipement =><li>{equipement}</li>)}/>
+            <LogementDescription title="Description" content={selectedResponse.description}/>
+            <LogementDescription title="Equipements" content={selectedResponse.equipments.map(equipement =><li>{equipement}</li>)}/>
             </div>
            
             

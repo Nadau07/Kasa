@@ -1,4 +1,4 @@
-import '../styles/FicheLogementComponent1.css'
+import '../styles/LogementImage.css'
 
 function FicheLogementComponents1(props) {
     return (
