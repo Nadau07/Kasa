@@ -1,20 +1,32 @@
 import Footer from '../components/Footer'
-import '../styles/Apropos.css'
+import '../styles/Banner.css'
+
 import {NavLink} from 'react-router-dom'
 import LogementDescription from '../components/LogementDescription'
 
 function Apropos(){
     return(
-        <div className='AproposGeneral'>
-            <div className='banner'>
-        <NavLink to={`/`}>
-        <img className='banner_logo'src='logo.jpg' alt='logo'/>
-        </NavLink>
-        <NavLink to={`/`}>Accueil</NavLink>
-        <NavLink to={`/Apropos`}>A propos</NavLink>
-    </div>
-            <img className='imgBanner2' src='Image_source_2.jpg' alt='ImgBanner2' />
+        <>
+        <div className='banner'>
+            <div className='image_banner'>  <NavLink to={`/`}>
+            <img className='banner_logo'src='logo.jpg' alt='logo'/>
+            </NavLink></div>
+          
+            <div className="lien_banner" >
+                <NavLink  to={`/`}>Accueil</NavLink>
+                <span className='separation-liens'></span>
+            <NavLink to={`/Apropos`}>A propos</NavLink>
+            </div>
+            
+        </div>
+           <div className='divImgBanner'>
+           <img className='imgBanner2' src='Image_source_2.jpg' alt='imgBanner'/>
+       </div>
+       
+
+
             <div className='Apropos-container'>
+    
                 <LogementDescription title="Fiabilité" content="Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont
  régulièrement vérifiées par nos équipes." />
                 <LogementDescription title="Respect" content="La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de
@@ -28,7 +40,7 @@ locataire, cela permet à nos équipes de vérifier que les standards sont bien 
 
             </div>
             <Footer />
-        </div>
+        </>
     )
 }
 

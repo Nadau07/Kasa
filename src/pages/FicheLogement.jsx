@@ -1,4 +1,6 @@
 import {NavLink} from 'react-router-dom'
+import '../styles/Banner.css'
+import Footer from '../components/Footer'
 import LogementImage from '../components/LogementImage'
 import LogementTitre from '../components/LogementTitre'
 import LogementProprietaire from '../components/LogementProprietaire'
@@ -32,11 +34,15 @@ function FicheLogement() {
     return(
         <>
         <div className='banner'>
-        <NavLink to={`/`}>
-        <img className='banner_logo'src='logo.jpg' alt='logo'/>
-        </NavLink>
-        <NavLink to={`/`}>Accueil</NavLink>
+            <div className='image_banner'><NavLink to={`/`}>
+        <img className='banner_logo'src='/logo.jpg' alt='logo'/>  </NavLink>
+        </div>
+        
+        <div className='lien_banner'><NavLink to={`/`}>Accueil</NavLink>
+        <span className='separation-liens'></span>
         <NavLink to={`/Apropos`}>A propos</NavLink>
+        </div>
+        
     </div>
     <div  className='ficheLogementTotal'>
       
@@ -57,6 +63,7 @@ function FicheLogement() {
             <LogementDescription title="Equipements" content={selectedResponse.equipments.map(equipement =><li key={equipement} >{equipement}</li>)}/>
             </div>
         </div>
+        <Footer />
         </>
     )
 }

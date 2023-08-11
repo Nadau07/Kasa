@@ -11,3 +11,15 @@
 }
 
 
+/*SMALL DEVICES*/
+@media screen and (max-width : 700px){
+
+.component2Et3{
+    flex-direction: column;
+}
+
+.component4Css{
+    flex-direction: column;
+}
+
+}

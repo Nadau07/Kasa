@@ -21,10 +21,35 @@
 .errorP2{
     margin-bottom:90px;
     font-size:14px;
+    color:#FF6060;
+    text-decoration: none;
 }
 
-/*SMALL DEVICE
+.errorP2:hover{
+    text-decoration: underline;
+}
+
+/*SMALL DEVICE*/
 
 @media screen and (max-width : 700px){
 
-}*/
+
+    .errorDivGlobal{
+        width: 100%;
+    }
+.error404{
+    font-size: 100px; 
+}
+
+.errorP1{
+    font-size:18px;
+}
+.errorP1Span{
+    display:block;
+}
+
+.errorP2{
+    margin-bottom: 160px;
+}
+
+}

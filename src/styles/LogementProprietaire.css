@@ -26,9 +26,47 @@
 }
 
 .note{
-    color: black;
+    font-size: 28px;
+    color: #D3D3D3;
 }
 
 .note_active{
 color: #FF6060;
+}
+
+/*SMALL DEVICES*/
+@media screen and (max-width : 700px){
+
+   .ficheLogementComponent2 h1{
+    font-size:24px;
+   } 
+   .ficheLogementComponent2 h2{
+    font-size:16px;
+   }
+
+   .ficheLogementComponent3{
+    display:flex;
+    width: 100%;
+    flex-wrap: nowrap;
+    position:relative;
+   }
+
+   .imgProprietaire{
+    width: 42px;
+    height:42px;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+
+   .note{
+    position:absolute;
+    left:0;
+    bottom:8px;
+    font-size: 20px;
+    
+   }
+   .ficheLogementProprietaire{
+    margin-top:5px;
+    font-size:12px;
+   }
 }
