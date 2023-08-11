@@ -13,11 +13,14 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
+    
 }
 
 .logementDescription i{
     cursor:pointer;
     font-size:24px; 
+
 }
 
 .paragrapheDescription{
@@ -29,4 +32,18 @@
     padding-bottom:5px;
     position:relative;
     z-index: -1;
+    /*animation: slide 0.3s ease-in-out;*/
+    
 }
+
+
+/*Animation pour slider les descriptions
+
+@keyframes slide {
+    0%{
+        transform: translateY(-100%) ;
+    }
+    100%{
+        transform: translateX(0);
+    }
+}*/

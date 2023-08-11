@@ -1,3 +1,7 @@
+.AproposGeneral{
+    font-family: 'Montserrat';}
+
+
 .imgBanner2{
     border-radius : 20px;
     width: 100%;
@@ -5,4 +9,9 @@
     object-fit: cover;
     filter: brightness(70%);
  }
- 
+
+ .Apropos-container{
+    margin: 40px 50px 40px 50px;
+    font-size:18px;
+    font-weight: 500;
+ }
