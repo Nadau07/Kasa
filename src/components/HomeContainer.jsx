@@ -5,6 +5,7 @@ import { useState, useEffect } from 'react';
 
 
 
+
 function LogementContainer(){
     const [appartements, setAppartements] = useState([]);
 
@@ -15,12 +16,16 @@ function LogementContainer(){
         .catch(console.error)
         }, []);
 
+
    
 
  return (
     <div className='containerLogement'>
     {appartements.map((appartement)=>(
-        <HomeItem key={appartement.id} title={appartement.title} cover={appartement.cover} id={appartement.id} />
+        <HomeItem key={appartement.id}
+        title={appartement.title} 
+        cover={appartement.cover}
+         id={appartement.id} />
     ))}
     
     </div>
