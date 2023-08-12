@@ -1,8 +1,8 @@
 
-.ficheLogementComponent2{
+.ficheLogementTitre{
     flex-grow: 1;
 }
-.ficheLogementComponent2 h1{
+.ficheLogementTitre h1{
     margin-top:0;
 }
 
@@ -17,6 +17,12 @@
 
 /*SMALL DEVICES*/
 @media screen and (max-width : 700px){
+    .ficheLogementTitre h1{
+        font-size:24px;
+       } 
+       .ficheLogementTitre h2{
+        font-size:16px;
+       }
 
     .ficheLogementTag{
         font-size:10px;

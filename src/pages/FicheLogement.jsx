@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import "../styles/Banner.css";
 import Footer from "../components/Footer";
-import LogementImage from "../components/LogementImage";
+import Gallery from "../components/Gallery";
 import LogementTitre from "../components/LogementTitre";
 import LogementProprietaire from "../components/LogementProprietaire";
 import LogementDescription from "../components/LogementDescription";
@@ -13,22 +13,22 @@ function FicheLogement() {
   const location = useLocation();
   console.log(location);
   console.log("l'id est:", location.state.appartementId);
-  const [selectedResponse, setSelectedResponse] = useState(null);
+  const [data, setData] = useState(null);
 
   useEffect(() => {
     fetch("/ListeLogement.json")
       .then((response) => response.json())
       .then((responses) => {
-        const selectedResponse = responses.find(
+        const data = responses.find(
           (response) => response.id === location.state.appartementId
         );
-        setSelectedResponse(selectedResponse);
-        console.log("SelectedResp :", selectedResponse);
+        setData(data);
+        console.log("data:", data);
       })
       .catch(console.error);
   }, []);
 
-  if (selectedResponse == null) return <div>Chargement de l'image..</div>;
+  if (data == null) return <div>Chargement de l'image..</div>;
 
   return (
     <>
@@ -48,32 +48,32 @@ function FicheLogement() {
         </div>
       </div>
       <div className="ficheLogementTotal">
-        <div className="component1">
-          <LogementImage pictures={selectedResponse.pictures} />
+        <div className="imageLogement">
+          <Gallery pictures={data.pictures} />
         </div>
 
-        <div className="component2Et3">
+        <div className="titreLogement">
           <LogementTitre
-            title={selectedResponse.title}
-            location={selectedResponse.location}
-            tag={selectedResponse.tags}
+            title={data.title}
+            location={data.location}
+            tag={data.tags}
           />
 
           <LogementProprietaire
-            rating={selectedResponse.rating}
-            host={selectedResponse.host}
+            rating={data.rating}
+            host={data.host}
           />
         </div>
 
-        <div className="component4Css">
+        <div className="descriptionLogement">
           <LogementDescription
             title="Description"
-            content={selectedResponse.description}
+            content={data.description}
           />
 
           <LogementDescription
             title="Equipements"
-            content={selectedResponse.equipments.map((equipement) => (
+            content={data.equipments.map((equipement) => (
               <li key={equipement}>{equipement}</li>
             ))}
           />

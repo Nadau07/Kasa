@@ -2,7 +2,7 @@ import { useState } from 'react'
 import '../styles/LogementDescription.css'
 
 
-function FicheLogementComponents4(props){
+function FicheLogementDescription(props){
 
 const [ParagrapheVisible , setParagrapheVisible ] = useState(false)
 
@@ -13,7 +13,7 @@ const ParagrapheActif = () =>{
 
     return(
 
-        <div className='component4Totalite'>
+        <div className='descriptionTotalite'>
             <p className='logementDescription'>
                 <span>{props.title}</span><span><i className="fa-solid fa-chevron-down" onClick= {ParagrapheActif}></i></span></p>
             {ParagrapheVisible && <p className='paragrapheDescription'>{props.content}</p>} 
@@ -24,4 +24,4 @@ const ParagrapheActif = () =>{
     )
 }
 
-export default FicheLogementComponents4
+export default FicheLogementDescription

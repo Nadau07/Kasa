@@ -3,10 +3,10 @@
     font-family: 'Montserrat';
 }
 
-.component2Et3{
+.titreLogement{
     display: flex;
 }
-.component4Css{
+.descriptionLogement{
     display: flex;
 }
 
@@ -14,11 +14,11 @@
 /*SMALL DEVICES*/
 @media screen and (max-width : 700px){
 
-.component2Et3{
+.titreLogement{
     flex-direction: column;
 }
 
-.component4Css{
+.descriptionLogement{
     flex-direction: column;
 }
 

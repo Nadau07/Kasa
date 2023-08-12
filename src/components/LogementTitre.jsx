@@ -1,9 +1,9 @@
 import '../styles/LogementTitre.css'
 
-function ficheLogementComponents2(props){
+function ficheLogementTitre(props){
 
     return(
-            <div className='ficheLogementComponent2'>
+            <div className='ficheLogementTitre'>
                 <h1>{props.title}</h1>
                 <h2>{props.location}</h2>
                 <>
@@ -16,4 +16,4 @@ function ficheLogementComponents2(props){
     )
 }
 
-export default ficheLogementComponents2
+export default ficheLogementTitre

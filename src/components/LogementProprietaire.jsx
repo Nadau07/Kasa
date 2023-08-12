@@ -1,6 +1,6 @@
 import '../styles/LogementProprietaire.css'
 
-function FicheLogementComponents3(props){
+function FicheLogementProprietaire(props){
 
 
         const name = props.host.name;
@@ -9,14 +9,14 @@ function FicheLogementComponents3(props){
         const namePicture = props.host.picture
     return(
 
-        <div className='ficheLogementComponent3'>
+        <div className='ficheLogementContainer'>
 
         <div className='ficheLogementProprietaire'>
         <h3> <span>{firstName}</span><span>{lastName} </span> </h3>
             <img className='imgProprietaire' src={namePicture} alt="imgProprietaire"/>
         </div>
 
-        <div className='note'>
+        <div className='noteProprietaire'>
         {[1, 2, 3, 4, 5].map((num) => (
         <span key={num} className={props.rating >= num ? "note_active" : "note_off"}>
             ★
@@ -29,4 +29,4 @@ function FicheLogementComponents3(props){
     )
 }
 
-export default FicheLogementComponents3
+export default FicheLogementProprietaire

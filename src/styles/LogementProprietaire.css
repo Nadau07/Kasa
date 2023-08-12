@@ -1,11 +1,11 @@
 
-.ficheLogementComponent3{
+.ficheLogementContainer{
     display: flex;
     flex-direction: column;
     gap: 10px;
     align-items: end;
 }
-.ficheLogementComponent3 h3{
+.ficheLogementContainer h3{
     margin-top:8px;
     margin-bottom:0;
     display: flex;
@@ -25,7 +25,7 @@
     border-radius: 50%;
 }
 
-.note{
+.noteProprietaire{
     font-size: 28px;
     color: #D3D3D3;
 }
@@ -37,14 +37,9 @@ color: #FF6060;
 /*SMALL DEVICES*/
 @media screen and (max-width : 700px){
 
-   .ficheLogementComponent2 h1{
-    font-size:24px;
-   } 
-   .ficheLogementComponent2 h2{
-    font-size:16px;
-   }
+   
 
-   .ficheLogementComponent3{
+   .ficheLogementContainer{
     display:flex;
     width: 100%;
     flex-wrap: nowrap;
@@ -58,7 +53,7 @@ color: #FF6060;
     border-radius: 50%;
 }
 
-   .note{
+   .noteProprietaire{
     position:absolute;
     left:0;
     bottom:8px;
