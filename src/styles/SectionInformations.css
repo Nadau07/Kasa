@@ -4,7 +4,7 @@
     margin-right:10px;
 }
 
-.logementDescription{
+.sectionInformation{
     background-color: #FF6060;
     color:white;
     border-radius: 10px;
@@ -18,13 +18,13 @@
     
 }
 
-.logementDescription i{
+.sectionInformation i{
     cursor:pointer;
     font-size:24px; 
 
 }
 
-.paragrapheDescription{
+.sectionParagraphe{
     background-color: #F6F6F6;
     margin-top:0;
     border-radius: 16px;
@@ -32,20 +32,6 @@
     padding-top:5px;
     padding-bottom:5px;
     position:relative;
-    z-index: -1;
-
-    /*animation: slide 0.3s ease-in-out;*/
-    
+    z-index: -1;  
 }
 
-
-/*Animation pour slider les descriptions
-
-@keyframes slide {
-    0%{
-        transform: translateY(-100%) ;
-    }
-    100%{
-        transform: translateX(0);
-    }
-}*/

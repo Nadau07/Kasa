@@ -1,6 +1,12 @@
 import { useState } from "react";
 import "../styles/Gallery.css";
 
+/**
+ *
+ * @returns {JSX} : Composant carousel avec sa numérotation.
+ *
+ */
+
 function LogementImage(props) {
   const pictures = props.pictures;
   const [Img, ImgActuelle] = useState(0);
@@ -17,9 +23,9 @@ function LogementImage(props) {
     const ImgPrecedente = Img - 1;
     if (ImgPrecedente < 0) {
       ImgActuelle(pictures.length - 1);
-      return;
+    } else {
+      ImgActuelle(ImgPrecedente);
     }
-    ImgActuelle(((Img - 1) % pictures.length) - 1);
   };
 
   return (

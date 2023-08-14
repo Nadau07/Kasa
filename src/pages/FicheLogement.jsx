@@ -4,32 +4,35 @@ import Footer from "../components/Footer";
 import Gallery from "../components/Gallery";
 import LogementTitre from "../components/LogementTitre";
 import LogementProprietaire from "../components/LogementProprietaire";
-import LogementDescription from "../components/LogementDescription";
+import SectionInformations from "../components/SectionInformations";
 import "../styles/FicheLogement.css";
-import { useLocation } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function FicheLogement() {
-  const location = useLocation();
-  console.log(location);
-  console.log("l'id est:", location.state.appartementId);
-  const [data, setData] = useState(null);
+  const { id } = useParams();
+  const navigate = useNavigate();
+
+  console.log(id);
+  /* console.log("l'id est:", location.state.appartementId);*/
+  const [data, setData] = useState("");
 
   useEffect(() => {
     fetch("/ListeLogement.json")
       .then((response) => response.json())
       .then((responses) => {
-        const data = responses.find(
-          (response) => response.id === location.state.appartementId
-        );
+        const data = responses.find((response) => response.id === id);
         setData(data);
         console.log("data:", data);
       })
       .catch(console.error);
-  }, []);
+  }, [id]);
 
-  if (data == null) return <div>Chargement de l'image..</div>;
-
+  if (data === undefined) {
+    navigate("/Error");
+    return null;
+  }
   return (
     <>
       <div className="banner">
@@ -49,34 +52,39 @@ function FicheLogement() {
       </div>
       <div className="ficheLogementTotal">
         <div className="imageLogement">
-          <Gallery pictures={data.pictures} />
+          {data && <Gallery pictures={data.pictures} />}
         </div>
 
         <div className="titreLogement">
-          <LogementTitre
-            title={data.title}
-            location={data.location}
-            tag={data.tags}
-          />
+          {data && (
+            <LogementTitre
+              title={data.title}
+              location={data.location}
+              tag={data.tags}
+            />
+          )}
 
-          <LogementProprietaire
-            rating={data.rating}
-            host={data.host}
-          />
+          {data && (
+            <LogementProprietaire rating={data.rating} host={data.host} />
+          )}
         </div>
 
         <div className="descriptionLogement">
-          <LogementDescription
-            title="Description"
-            content={data.description}
-          />
+          {data && (
+            <SectionInformations
+              title="Description"
+              content={data.description}
+            />
+          )}
 
-          <LogementDescription
-            title="Equipements"
-            content={data.equipments.map((equipement) => (
-              <li key={equipement}>{equipement}</li>
-            ))}
-          />
+          {data && (
+            <SectionInformations
+              title="Equipements"
+              content={data.equipments.map((equipement) => (
+                <li key={equipement}>{equipement}</li>
+              ))}
+            />
+          )}
         </div>
       </div>
       <Footer />
