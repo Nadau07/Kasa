@@ -21,9 +21,9 @@ function SectionInformations(props) {
       <span>{props.title}</span>
       <span>
         {ParagrapheVisible ? (
-          <i className="fa-solid fa-chevron-up" onClick={ParagrapheActif}></i>
-        ) : (
           <i className="fa-solid fa-chevron-down" onClick={ParagrapheActif}></i>
+        ) : (
+          <i className="fa-solid fa-chevron-up" onClick={ParagrapheActif}></i>
         )}
       </span>
     </p>
